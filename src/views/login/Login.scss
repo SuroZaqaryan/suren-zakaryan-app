@@ -1,0 +1,71 @@
+.login {
+  background-image: url("@/assets/images/login-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 14px;
+
+  &__form {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    padding: 80px 18px 20px 18px;
+    border-radius: 5px;
+    background: #fff;
+  }
+
+  &__banner {
+    position: absolute;
+    z-index: 1;
+    width: calc(100% - 30px);
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #50B053;
+    border-radius: 5px;
+    height: 56px;
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: center;
+    margin: 24px auto 0 auto;
+    background: #50B053;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    max-width: 110px;
+    width: 100%;
+    line-height: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    box-shadow: 0 4px 4px 0 #6AAE5E40;
+
+    &:hover {
+      opacity: .9;
+      cursor: pointer;
+    }
+
+  }
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 8px;
+}

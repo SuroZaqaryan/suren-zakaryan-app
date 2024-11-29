@@ -1,0 +1,52 @@
+.dashboard__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  .dashboard__content {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+
+    .dashboard__col {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .base-input,
+      .custom-select {
+        flex: 1;
+      }
+    }
+
+    .dashboard__area textarea {
+      position: relative;
+      padding: 12px 0;
+      width: 100%;
+      font-size: 14px;
+      resize: none;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #CCCCCC;
+    }
+  }
+
+  .dashboard__header {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 17px;
+
+    button {
+      padding: 10px 16px;
+      border: none;
+      font-size: 10px;
+      text-transform: uppercase;
+      color: #fff;
+      background: #50B053;
+      box-shadow: 0 4px 4px 0 rgba(106, 174, 94, 0.2509803922);
+      border-radius: 2px;
+    }
+  }
+}
+

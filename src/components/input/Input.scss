@@ -1,0 +1,46 @@
+.base-input {
+  label {
+    padding-left: 34px;
+    color: #50B053;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 42px;
+
+    input {
+      width: 100%;
+      height: 100%;
+      outline: none;
+      background: #fff;
+      border: none;
+      border-bottom: 1px solid #CCCCCC;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+  }
+
+  &__icon.right {
+    right: 10px;
+  }
+
+  &__password {
+    position: absolute;
+    right: 8px;
+    cursor: pointer;
+  }
+}
+
+.disabled {
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.5;
+}
