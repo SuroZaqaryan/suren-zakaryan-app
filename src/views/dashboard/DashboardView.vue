@@ -7,9 +7,9 @@ import DashboardCreate from "./sections/DashboardCreate.vue";
 
 export default {
   components: {
+    Input,
     Dropdown,
     Pagination,
-    Input,
     DashboardCreate,
   },
   data() {
@@ -51,7 +51,11 @@ export default {
     },
   },
   async created() {
-    if (this.$store.state.token) await this.fetchPageData();
+    if (this.$store.state.token) {
+      await this.fetchPageData();
+    } else {
+      this.$router.push('/login');
+    }
   },
   watch: {
     async search(value) {

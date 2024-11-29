@@ -25,7 +25,7 @@ export default new Vuex.Store({
     actions: {
         async login({ commit }, credentials) {
             try {
-                const response = await axios.post('https://dev.moydomonline.ru/api/auth/login/', credentials);
+                const response = await axios.post('auth/login/', credentials);
                 commit('setToken', response.data.key);
                 localStorage.setItem('token', response.data.key);
                 axios.defaults.headers['Authorization'] = `Token ${response.data.key}`;
@@ -38,7 +38,7 @@ export default new Vuex.Store({
         async fetchAppeals({ commit }, { page = 1, page_size = 10, search = '' }) {
             try {
                 const response = await axios.get('appeals/v1.0/appeals/', {
-                    params: {search, page, page_size },
+                    params: { search, page, page_size },
                 });
 
                 commit('setAppeals', response.data);
@@ -47,7 +47,7 @@ export default new Vuex.Store({
             }
         },
 
-        async searchAppeals({commit}, { search = '' }) {
+        async searchAppeals({ commit }, { search = '' }) {
             try {
                 const response = await axios.get(`geo/v2.0/user-premises/`, {
                     params: { search }
@@ -59,7 +59,7 @@ export default new Vuex.Store({
         },
 
         // eslint-disable-next-line no-empty-pattern
-        async sendAppeals({}, data) {
+        async sendAppeals({ }, data) {
             try {
                 await axios.post('appeals/v1.0/appeals', data);
                 toast.success('Заявка успешно создана!');

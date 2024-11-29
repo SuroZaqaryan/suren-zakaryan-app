@@ -26,29 +26,29 @@ button {
   scrollbar-color: #eeeeee #fff;
 }
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
+input:not(.static-placeholder)::placeholder,
+textarea:not(.static-placeholder)::placeholder {
   color: #ABABAB;
   text-align: left;
-  position:absolute;
+  position: absolute;
   transition: all 0.3s;
 }
 
-input:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder {
+input:not(.static-placeholder):focus::placeholder,
+textarea:not(.static-placeholder):focus::placeholder {
   -ms-transform: translate(0, -15px);
   -webkit-transform: translate(0, -15px);
   transform: translate(0, -15px);
   font-size: 12px;
-  color:#50B053;
+  color: #50B053;
 }
 
-input:focus::-moz-placeholder,
-textarea:focus::-moz-placeholder {
+input:not(.static-placeholder):focus::moz-placeholder,
+textarea:not(.static-placeholder):focus::moz-placeholder {
   -webkit-transform: translate(0, -15px);
   transform: translate(0, -15px);
   font-size: 12px;
-  color:#50B053;
+  color: #50B053;
 }
 
 input:-webkit-autofill,

@@ -18,7 +18,7 @@ export default {
     async handleLogin() {
       const credentials = {
         username: this.username,
-        password: this.password
+        password: this.password,
       }
 
       const success = await this.$store.dispatch('login', credentials)
@@ -38,18 +38,20 @@ export default {
         <Input
             v-model="username"
             type="text"
-            label="Логин или Телефон"
             placeholder="+7"
-            required
+            label="Логин или Телефон"
             :icon="require('@/assets/icons/call.svg')"
+            class="static-placeholder"
+            required
         />
 
         <Input
             v-model="password"
-            type="password"
             placeholder="Пароль"
-            required
+            type="password"
             :icon="require('@/assets/icons/lock.svg')"
+            class="static-placeholder"
+            required
         />
 
         <p v-if="error" class="error">Неправильные данные</p>
